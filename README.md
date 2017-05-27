@@ -1,5 +1,5 @@
-### Raspberry Pi 3
-### system version: 2017-04-10-raspbian-jessie
+# Raspberry Pi 3
+# system version: 2017-04-10-raspbian-jessie
 
 # WiringPi installation:
     1.
@@ -21,17 +21,17 @@
     sudo apt-get install python-smbus
 
     sudo nano /etc/modules
-* Add the following two lines:
+## Add the following two lines:
 	i2c-bcm2708
 	i2c-dev
-* Exit nano Ctrl+X and enter Y
+## Exit nano Ctrl+X and enter Y
 
 	sudo nano /boot/config.txt
-* Add at the end:
+## Add at the end:
 	dtoverlay=pi3-disable-bt
 	enable_uart=1
-* Find '#dtparam=i2c_arm=on' and delete '#'
-* Exit nano Ctrl+X and enter Y
+## Find '#dtparam=i2c_arm=on' and delete '#'
+## Exit nano Ctrl+X and enter Y
 
 # Serial configuration:
     sudo clone https://github.com/pyserial/pyserial.git
@@ -39,8 +39,8 @@
 
     sudo python setup.py install
     sudo nano /boot/cmdline.txt
-* Delete all, and then add:
+## Delete all, and then add:
     dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
-* Exit nano Ctrl+X and enter Y
+## Exit nano Ctrl+X and enter Y
 
     sudo reboot
