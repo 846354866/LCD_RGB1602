@@ -4,10 +4,9 @@
 # SDA: Pin3
 # SCL: Pin5
 
-import smbus
-import serial
 import time
-import rgb1602 as LCD
+from rgb1602Packge import rgb1602 as LCD
+import serial
 
 ser = serial.Serial("/dev/ttyAMA0", 9600)
 

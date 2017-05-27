@@ -4,9 +4,9 @@
 # SDA: Pin3
 # SCL: Pin5
 
-import smbus
 import time
-import rgb1602 as LCD
+from rgb1602Packge import rgb1602 as LCD
+
 
 def breath(lcd, colorAddr):
     for i in range(255):
