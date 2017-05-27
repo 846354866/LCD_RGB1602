@@ -21,15 +21,15 @@
     sudo apt-get install python-smbus
 
     sudo nano /etc/modules
-* Add the following two lines
-    i2c-bcm2708
-    i2c-dev
+* Add the following two lines:
+	i2c-bcm2708
+	i2c-dev
 * Exit nano Ctrl+X and enter Y
 
-    sudo nano /boot/config.txt
+	sudo nano /boot/config.txt
 * Add at the end:
-    dtoverlay=pi3-disable-bt
-    enable_uart=1
+	dtoverlay=pi3-disable-bt
+	enable_uart=1
 * Find '#dtparam=i2c_arm=on' and delete '#'
 * Exit nano Ctrl+X and enter Y
 
